@@ -50,7 +50,7 @@ jobs:
       uses: docker/metadata-action@v3
       with:
         images: |
-          xtodorovicm/ambulance-ufe:latest
+          xtodorovicm/ambulance-ufe
         tags: |
           type=schedule
           type=ref,event=branch

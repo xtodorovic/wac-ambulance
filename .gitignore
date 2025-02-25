@@ -1,6 +1,7 @@
 dist/
 www/
 loader/
+ambulance_gitops/
 
 *~
 *.sw[mnpcod]
