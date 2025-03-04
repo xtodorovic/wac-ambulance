@@ -12,7 +12,7 @@ export class MtWac {
   private async getWaitingPatientsAsync(){
     return await Promise.resolve(
       [{
-          name: 'Jožko Púčik',
+          name: 'Phd. Jožko Púčik - zmena',
           patientId: '10001',
           estimatedStart: new Date(Date.now() + 65 * 60),
           estimatedDurationMinutes: 15,
