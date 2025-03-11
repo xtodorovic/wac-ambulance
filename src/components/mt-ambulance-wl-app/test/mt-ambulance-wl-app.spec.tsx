@@ -2,10 +2,11 @@ import { newSpecPage } from '@stencil/core/testing';
 import { MtAmbulanceWlApp } from '../mt-ambulance-wl-app';
 
 describe('mt-ambulance-wl-app', () => {
-  it('renders', async () => {
+  it('renders editor', async () => {
     const page = await newSpecPage({
+      url: `http://localhost/entry/@new`,
       components: [MtAmbulanceWlApp],
-      html: `<mt-ambulance-wl-app></mt-ambulance-wl-app>`,
+      html: `<mt-ambulance-wl-app base-path="/"></mt-ambulance-wl-app>`,
     });
     page.win.navigation = new EventTarget()
     const child = await page.root.shadowRoot.firstElementChild;
