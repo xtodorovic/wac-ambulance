@@ -2,6 +2,7 @@ dist/
 www/
 loader/
 ambulance_gitops/
+.openapi.json
 
 *~
 *.sw[mnpcod]
