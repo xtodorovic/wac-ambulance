@@ -46,8 +46,8 @@ export class MtWac {
         ? <div class="error">{this.errorMessage}</div>
         :
           <md-list>
-          {this.waitingPatients.map((patient, index) =>
-            <md-list-item onClick={ () => this.entryClicked.emit(index.toString())}>
+            {this.waitingPatients.map((patient) =>
+            <md-list-item onClick={ () => this.entryClicked.emit(patient.id)}>
               <div slot="headline">{patient.name}</div>
               <div slot="supporting-text">{"Predpokladaný vstup: " + patient.estimatedStart?.toLocaleString()}</div>
                 <md-icon slot="start">person</md-icon>
@@ -55,6 +55,10 @@ export class MtWac {
           )}
         </md-list>
         }
+            <md-filled-icon-button class="add-button"
+              onclick={() => this.entryClicked.emit("@new")}>
+              <md-icon>add</md-icon>
+            </md-filled-icon-button>
       </Host>
     );
   }

@@ -53,6 +53,7 @@ export class MtAmbulanceWlApp {
       <Host>
         { element === "editor"
         ? <mt-ambulance-wl-editor entry-id={entryId}
+            ambulance-id={this.ambulanceId} api-base={this.apiBase}
             oneditor-closed={ () => navigate("./list")} >
           </mt-ambulance-wl-editor>
         : <mt-wac ambulance-id={this.ambulanceId} api-base={this.apiBase}
